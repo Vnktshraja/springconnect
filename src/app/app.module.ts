@@ -1,18 +1,26 @@
-import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
-import { AppRoutingModule } from './app-routing.module';
+import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
+import { UserFormComponent } from './user-form/user-form.component';
+import { UserDataComponent } from './user-data/user-data.component';
+import { RestProvider } from '../providers/restprovider/restprovider';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    UserFormComponent,
+    UserDataComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    RestProvider
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
