@@ -1,29 +1,25 @@
 <div class="container">
   <div class="card bg-light">
-<div class="card-body">
-  <form #form="ngForm" (ngSubmit)="createUser(user)">
-<div class="form-group row">
-  <label class="col-form-label col-md-4">Name</label>
-<div class="col-md-4">
-  <input type="text" class="form-control" name="name"[(ngModel)]="user.name">
-
-</div>
-
-</div>
-<div class="form-group row">
-  <label class="col-form-label col-md-4">Country</label>
-<div class="col-md-4">
-  <input type="text" class="form-control" name="country" [(ngModel)]="user.country">
-  
-</div>
-
-</div>
-<div class="row justify-content-center">
-  <input type="submit" name="submit"></div>
-  </form>
-</div>
-</div>
+    <div class="card-body">
+        <form #form="ngForm" (ngSubmit)="createUser(user)">
+      <div class="form-group row">
+        <label class="col-form-label col-md-4">Name</label>
+        <div class="col-md-4">
+          <input type="text" class="form-control" ngModel name="user.name">
+        </div>
+      </div>
+      <div class="form-group row">
+          <label class="col-form-label col-md-4">Country</label>
+        <div class="col-md-4">
+          <input type="text" class="form-control" name="country" [(ngModel)]="user.country">
+        </div>
+      </div>
+    <div class="row justify-content-center">
+      <input type="submit" name="submit"></div>
+      </form>
+    </div>
   </div>
+</div>
   
 
 
